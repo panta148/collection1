@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% block css%}
+.make{
+    display:flex;
+    align-items:center;
+}
+        
+{% endblock%}
+{%block content%}
+<form  class="make" action="/update/{{employee.id}}" method="POST">
+    {% csrf_token%}
+    <table>
+    <br/>
+        <tr>
+            <td><input type="text" name="eid" value="{{employee.eid}}"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="ename" value="{{employee.ename}}"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="eemail" value="{{employee.eemail}}"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="econtact" value="{{employee.econtact}}"></td>
+        </tr>
+       
+    </table>
+    <br/>
+     <tr>
+            <button type="submit">Update</button>
+        </tr>
+</form>
+{%endblock%}

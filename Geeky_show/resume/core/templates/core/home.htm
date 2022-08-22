@@ -1,0 +1,34 @@
+{% extends 'core/base.htm'%}
+{% load static%}
+{% block content%}
+<div class="my-4">
+    <div class="text-center">
+        <img src="{% static 'core/images/amrit.jpg'%}" alt="userphoto" class="img-thumbnail " width="200px" height="100px">
+    </div>
+    <div class="text-white text-justify mt-5 mx-5">
+        <h1 class="font-weight-bold st-font">Hello,</h1>
+        <div class="px-4" style="line-height: 1.5rem;">
+            <p text-indent="100px">
+                I am <b class="text-warning">Amrit Panta.</b> I am Currently Studying the Computer Engineer in Everest 
+                Engineering College, kathmandu in fifth semester.
+            </p>
+            <p>
+                I have passed the school and the college in banepa and got the good marks 85% and 82% respectively.
+                i had the interest on technology and the id from when i was in the school level. so i choice my interst and 
+                currently studying <b class="text-warning">Computer Engineer.</b> 
+
+            </p>
+            <p>
+                I had learn the html,css,js and Django in the lockdown due to the COVID-19. As i have plan to join in the 
+                intenship in the last year but due to the time that we all student have due to corona , i complete all the 
+                task . so i am full confident that i have the skill to join and help to other with the knoowledge that 
+                i have gain and share my experience also too.
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact'%}" class="btn btn-outline-warning my-3 mr-5 ">Hire Me</a>
+        <a href="{% url 'contact'%}" class="btn btn-outline-info my-3 ">Contact</a>
+    </div>
+</div>
+{% endblock content%}

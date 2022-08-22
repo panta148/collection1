@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.e-commerse_website.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    list-style-type:none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding:50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    margin: 25px 0;
+    line-height: 60px;
+}
+.btn{
+    display: inline-block;
+    background:#ff523b;
+    color:#fff ;
+    padding: 8px 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition:transform 1s;
+    margin-left: 30px;
+}
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+    margin-top:2px;
+}
+.btn:hover{
+    background:#563434;
+} 
+.col-2 .make{
+    padding-left: 20px;
+}
+ /* finish of the header part */
+.category{
+     margin: 70px 0;
+ }
+.smallcontainer{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+
+.col-3{
+    flex-basis: 30%;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+/* finish of categoory */
+.col-4{
+    flex-basis: 25%;
+    padding:10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition:transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+
+
+}
+.title::after{
+    content: "";
+    background: #ff823b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    padding-bottom: 0;
+    padding-left: 50%;
+    transform: translatex(-50%);
+
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4{
+    font-size: 14px;
+}
+.col-4:hover{
+    transform: translatey(-5px);
+}
+.rating .fat{
+    color: #ff523b;
+}
+/* new */
+.offer{
+    background:radial-gradient(#fff,#ffd6d6);
+    margin-top: 50px;
+    padding: 30px 0;
+}
+small{
+    color:#555;
+}
+.offer .col-2 img{
+    padding: 50px;
+}
+
+/* footer sytlle */
+.myfooter {
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+            margin-top: 30px;
+
+        }
+        .mybox{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .myfooter p {
+            color: #8a8a8a;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .myfooter h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4 {
+            min-width: 250px;
+            margin-bottom: 20px;
+
+        }
+
+        .col-1 {
+            flex-basis: 40%;
+        }
+
+        .col-2 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .myfooter.col-2 img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+        .col-3{
+            flex-basis: 12%;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .applogo{
+            margin-top: 20px;
+        }
+        .applogo img{
+            width: 140px;
+        }
+        .myfooter hr{
+            border: none;
+            background:#b5b5b5;
+            height: 1px;
+            margin: 20px 0;
+        }
+        .copyright{
+            text-align: center;
+
+        }
+
+    </style>   
+</head>
+
+<body>
+    {% load static%}
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png'%}" alt="logo photo" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="about.html" target="_">Abouts</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+
+                    </ul>
+
+                </nav>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="make">
+                    <h1>Give your workout <br> New Style</h1>
+                    <p>This is the website where you will find all the required online shooping materials.<br>Enjoy our
+                        Product and get the good one too</p>
+                    <a href="" class="btn">Express Now &#8594;</a>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/image1.png'%}" alt="this is big images">
+            </div>
+        </div>
+    </div>
+    <!-- finish of the header part -->
+
+    <div class="category">
+        <div class="smallcontainer">
+            <div class="row">
+
+                <div class="col-3">
+                    <img src="{% static 'images/category-1'%}" alt="">
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/category-2'%}" alt="">
+
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/category-3'%}" alt="">
+
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <!-- finish of category -->
+    <div class="smallcontainer">
+        <h2 class="title">Featured Product</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src=" {% static 'images/product-1.jpg'%}" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    
+
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-2.jpg'%}" alt="">
+                <h4>Shoes</h4>
+                <p>$20.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-3.jpg'%}" alt="">
+                <h4>Gray Paint</h4>
+                <p>$70.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-4.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+        </div>
+      
+    </div>
+    <!-- finidsh of the product -->
+    <div class="smallcontainer">
+        <h2 class="title">Latest Product</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="{% static 'images/product-5.jpg'%}" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    
+
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-6.jpg'%}" alt="">
+                <h4>Shoes</h4>
+                <p>$20.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-7.jpg'%}" alt="">
+                <h4>Gray Paint</h4>
+                <p>$70.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-8.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-9.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-10.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-11.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-12.jpg'%}" alt="">
+                <h4>Blue Printed T-Shirt</h4>
+                <p>$50.00</p>
+                
+            </div>
+        </div>
+      
+    </div>
+    <!-- offer -->
+    <div class="offer">
+        <div class="smallcontainer">
+            <div class="row">
+                <div class="col-2">
+                    <img src="{% static 'images/exclusive.png'%}" alt="" class="otherimage">
+
+                </div>
+                <div class="col-2">
+                    <p>this is the new websites that you must be used to be the better user</p>
+                    <h1>Digital Clock</h1>
+                    <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, alias.</small>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+    <!-- testonomial -->
+    <!-- footer -->
+    <div class="myfooter">
+        <div class="mybox">
+            <div class="row">
+                <div class="col-1">
+                    <h1>Download Our APP</h1>
+                    <p>This app will definately helps to online transition</p>
+                    <div class="applogo">
+                        <img src="{% static 'shop/app-store.png'%}" alt="">
+                        <img src="{% static 'shop/play-store.png'%}" alt="">
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'shop/logo-white.png'%}" alt="">
+                    <p>our purpose is to give you the benificial in online marketing</p>
+
+                </div>
+                <div class="col-3">
+                    <h3>Useful Link</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join affilite</li>
+                    </ul>
+
+                </div>
+                <div class="col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">FaceBook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 Online shop</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
